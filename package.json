@@ -1,0 +1,26 @@
+{
+  "name": "4work",
+  "version": "1.0.0",
+  "description": "test",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "server": "nodemon app.js",
+    "client": "npm run start --prefix my-app",
+    "dev": "concurrently \"npm run server\" \"npm run client\""
+  },
+  "author": "Andrei Zudov",
+  "license": "ISC",
+  "dependencies": {
+    "excel4node": "^1.7.2",
+    "express": "^4.17.3",
+    "multer": "^1.4.4",
+    "pm2": "^5.2.0",
+    "react-scripts": "^5.0.0",
+    "xlsx": "^0.18.4"
+  },
+  "devDependencies": {
+    "concurrently": "^7.0.0",
+    "nodemon": "^2.0.15"
+  }
+}
