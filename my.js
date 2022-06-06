@@ -127,7 +127,8 @@ recursia()
 
 
 // вывод по марже
-let vivodPoMarge = "Изменение маржи за прошедшую неделю на" + " " + deltaMarga.toFixed(2)+ "%" + " "+ "в абсолютном вырежении"+ " "+ (sumRealizaciaCurrent*obshayaMargaCurrent - sumRealizaciaPast*obshayaMargaPast).toFixed(0) + "Руб"
+console.log(obshayaMargaCurrent)
+let vivodPoMarge = "Изменение маржи за прошедшую неделю на" + " " + deltaMarga.toFixed(2)+ "%" + " "+ "в абсолютном вырежении"+ " "+ (sumRealizaciaCurrent*obshayaMargaCurrent/100 - sumRealizaciaPast*obshayaMargaPast/100).toFixed(0) + "Руб"
 console.log(vivodPoMarge)
 
 // условие если полоджительное изменение маржи то первые три позиции , если отрицательные то первые три отрицательные 

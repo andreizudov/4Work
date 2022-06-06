@@ -1,15 +1,21 @@
 import logo from './logo.svg';
 import './App.css';
+import {Routes, Route, Link} from "react-router-dom"
+import UploadPages from './pages/UploadPages'
+import MainPage from './pages/MainPage';
 
 function App() {
   return (
     <div className="App">
-    <h1> Недельные отчеты</h1>
-    <form action="/upload" method="post" enctype="multipart/form-data"> 
-    <label>Файл</label><br/>
-    <input type="file" name="filedata" /><br/>
-    <input type="submit" value="Send" /> 
-    </form> 
+    <header> 
+      <Link to='/'>Главная</Link>
+      <Link to='/upload'>Загружено</Link>
+    </header>
+    <Routes>
+      <Route path='/' element={<MainPage/>}/> 
+
+      <Route path='/upload' element={<UploadPages/>}/> 
+    </Routes>
     
     
       
